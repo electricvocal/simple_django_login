@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <h3>Ingresar</h3>
+    {% if message %}
+      <div class="alert alert-danger">{{ message }}</div>
+    {% endif %}
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        <label>Nombre de usuario o Mail</label>
+        <input class="form-control" name="identifier" required>
+      </div>
+      <div class="form-group">
+        <label>Contraseña</label>
+        <input class="form-control" name="password" type="password" required>
+      </div>
+      <button class="btn btn-success">Ingresar</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

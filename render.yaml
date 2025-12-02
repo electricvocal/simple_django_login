@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: simple-django-login
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn mysite.wsgi"
+    plan: free

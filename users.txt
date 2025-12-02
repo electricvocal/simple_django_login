@@ -1,0 +1,1 @@
+# users stored per line as: (username, email, password, subscription)
