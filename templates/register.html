@@ -3,9 +3,13 @@
 <div class="row justify-content-center">
   <div class="col-md-6">
     <h3>Registrarse</h3>
+
     {% if message %}
-      <div class="alert {{ 'alert-success' if success else 'alert-danger' }}">{{ message }}</div>
+      <div class="alert {% if success %}alert-success{% else %}alert-danger{% endif %}">
+        {{ message }}
+      </div>
     {% endif %}
+
     <form method="post">
       {% csrf_token %}
       <div class="form-group">
@@ -20,8 +24,9 @@
         <label>Contraseña</label>
         <input class="form-control" name="password" type="password" required>
       </div>
-      <button class="btn btn-primary">Registrarse</button>
+      <button type="submit" class="btn btn-primary mt-3">Registrarse</button>
     </form>
   </div>
 </div>
 {% endblock %}
+
