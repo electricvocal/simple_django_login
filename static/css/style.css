@@ -1,0 +1,36 @@
+/* Modern input style */
+.modern-input {
+    border: none;
+    border-bottom: 2px solid #ddd;
+    border-radius: 0;
+    padding-left: 0;
+    font-size: 15px;
+}
+
+.modern-input:focus {
+    box-shadow: none;
+    border-bottom: 2px solid #ff6f00; /* naranja suave */
+}
+
+/* Button style */
+.login-btn {
+    background-color: #ff6f00;
+    border: none;
+}
+
+.login-btn:hover {
+    background-color: #e66000;
+}
+
+/* Card adjustments */
+.login-card {
+    padding: 40px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+    .login-card {
+        padding: 25px;
+        margin-top: 20px;
+    }
+}
